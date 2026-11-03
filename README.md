@@ -1,5 +1,7 @@
 # mmap-entropy
 
+[![CI](https://github.com/luckyjupiter/mmap-entropy/actions/workflows/ci.yml/badge.svg)](https://github.com/luckyjupiter/mmap-entropy/actions/workflows/ci.yml)
+
 A fixed-layout memory-mapped ring for passing byte chunks between processes on
 the same host. A producer publishes into slots; readers claim a stable slot,
 copy the bytes, and release it. No socket, daemon framework, database, or
@@ -111,7 +113,8 @@ with RingReader(path) as first, RingReader(path) as second:
 ## Format
 
 The exact file layout, structs, and state transitions are in
-[docs/FORMAT.md](docs/FORMAT.md).
+[docs/FORMAT.md](docs/FORMAT.md). The problem, decisions, rejected alternatives,
+and verification are in [docs/design.md](docs/design.md).
 
 ## Tests
 

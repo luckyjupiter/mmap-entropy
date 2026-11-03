@@ -18,6 +18,10 @@ classifiers = [
 ]
 dependencies = []
 
+[project.urls]
+Repository = "https://github.com/luckyjupiter/mmap-entropy"
+Issues = "https://github.com/luckyjupiter/mmap-entropy/issues"
+
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
 
